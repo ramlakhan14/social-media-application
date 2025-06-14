@@ -1,0 +1,16 @@
+{
+  "name": "major-project-2",
+  "version": "1.0.0",
+  "description": "authentication , authentication using passport sass databse relation(posts and comments),deleting and upadting databse and distributing views ,async wait plus error handling ajax making apis and jwt authentication social authentication deployement",
+  "license": "ISC",
+  "author": "ramlakhan kumar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
