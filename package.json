@@ -11,10 +11,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-ejs": "^2.0.0",
     "express-ejs-layouts": "^2.5.1",
-    "layouts": "^3.0.2"
+    "layouts": "^3.0.2",
+    "mongoose": "^8.15.2"
   }
 }
