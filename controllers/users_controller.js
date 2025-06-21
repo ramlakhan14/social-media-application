@@ -1,27 +1,30 @@
 const User = require('../models/user');
 
-// Render user profile
-module.exports.profile = function(req, res){
-    if (req.cookies.user_id){
-        User.findById(req.cookies.user_id, function(err, user){
-            if (user){
+
+
+// Render user profile (Updated for Mongoose v7+)
+module.exports.profile = async function(req, res) {
+    try {
+        if (req.cookies.user_id) {
+            const user = await User.findById(req.cookies.user_id);
+
+            if (user) {
                 return res.render('user_profile', {
                     title: "User Profile",
                     user: user
-                })
-            }else{
+                });
+            } else {
                 return res.redirect('/users/sign-in');
-
             }
-        });
-    }else{
-        return res.redirect('/users/sign-in');
-
+        } else {
+            return res.redirect('/users/sign-in');
+        }
+    } catch (err) {
+        console.error('Error fetching user for profile:', err);
+        return res.status(500).send('Internal Server Error');
     }
+};
 
-
-    
-}
 
 // Render the sign up page
 module.exports.signUp = function(req, res){
