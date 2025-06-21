@@ -21,6 +21,8 @@
     "layouts": "^3.0.2",
     "mongoose": "^8.15.2",
     "passport": "^0.7.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "sass": "^1.89.2",
+    "sass-middleware": "^0.0.3"
   }
 }
